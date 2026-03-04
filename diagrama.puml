@@ -1,0 +1,19 @@
+@startuml
+class Pacman
+class Fantasma
+Class Personaje
+Class Enemigo
+Class Punto
+Class Pastilla
+
+Pacman --|> Personaje
+Pacman *-- Vida
+Pacman o-- Pastilla
+
+Fantasma --|> Enemigo
+Fantasma *-- Vida
+Fantasma *-- Punto
+
+Fruta --|> Puntos
+Pastilla --|> Puntos
+@enduml
