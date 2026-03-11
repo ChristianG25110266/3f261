@@ -30,6 +30,7 @@ class Estado
 class Velocidad
 class Colision
 
+<<<<<<< HEAD
 Pacman --|> Personaje : es
 Fantasma --|> Enemigo : es
 Enemigo --|> Personaje : es
@@ -62,5 +63,39 @@ Sonido ..> Musica : usa
 Mapa ..> Pantalla : usa
 Pacman ..> Animacion : usa
 Fantasma ..> Estado : usa
+=======
+Pacman --|> Personaje
+Fantasma --|> Enemigo
+Enemigo --|> Personaje
+Pastilla --|> Punto
+Fruta --|> Punto
+Bonus --|> Punto
+
+Pacman *-- Vida
+Fantasma *-- Vida
+Fantasma *-- Punto
+Pacman o-- Pastilla
+Pacman o-- Puntuacion
+Pacman o-- Movimiento
+Movimiento o-- Direccion
+Movimiento o-- Velocidad
+Pacman o-- Poder
+Jugador o-- Pacman
+Jugador o-- Control
+Control o-- Teclado
+
+Mapa *-- Laberinto
+Laberinto *-- Muro
+Laberinto *-- Camino
+Mapa o-- Pantalla
+
+Nivel o-- Tiempo
+Pacman o-- Portal
+Pacman o-- Colision
+Pacman o-- Animacion
+Fantasma o-- Estado
+Pacman o-- Sonido
+Sonido o-- Musica
+>>>>>>> b4a8f67 (diagrama puml)
 
 @enduml
