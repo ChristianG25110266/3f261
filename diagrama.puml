@@ -38,40 +38,6 @@ class Estado
 class Velocidad
 class Colision
 
-<<<<<<< HEAD
-Pacman --|> Personaje : es
-Fantasma --|> Enemigo : es
-Enemigo --|> Personaje : es
-Pastilla --|> Punto : es
-Fruta --|> Punto : es
-Bonus --|> Punto : es
-
-Pacman *-- Vida : tiene
-Fantasma *-- Vida : tiene
-Jugador o-- Pacman : tiene
-Mapa *-- Laberinto : tiene
-Laberinto *-- Muro : tiene
-Laberinto *-- Camino : tiene
-Nivel o-- Tiempo : tiene
-Pacman o-- Puntuacion : tiene
-
-Pacman ..> Movimiento : usa
-Movimiento ..> Direccion : usa
-Movimiento ..> Velocidad : usa
-Pacman ..> Punto : usa
-Fantasma ..> Pacman : usa
-Jugador ..> Control : usa
-Control ..> Teclado : usa
-Pacman ..> Portal : usa
-Pacman ..> Colision : usa
-Pacman ..> Poder : usa
-
-Pacman ..> Sonido : usa
-Sonido ..> Musica : usa
-Mapa ..> Pantalla : usa
-Pacman ..> Animacion : usa
-Fantasma ..> Estado : usa
-=======
 Pacman --|> Personaje
 Fantasma --|> Enemigo
 Enemigo --|> Personaje
@@ -90,27 +56,11 @@ Mapa "1" *-- "1" Laberinto
 Laberinto "1" *-- "1..*" Muro
 Laberinto "1" *-- "1..*" Camino
 
-<<<<<<< HEAD
-Mapa *-- Laberinto
-Laberinto *-- Muro
-Laberinto *-- Camino
-Mapa o-- Pantalla
-
-Nivel o-- Tiempo
-Pacman o-- Portal
-Pacman o-- Colision
-Pacman o-- Animacion
-Fantasma o-- Estado
-Pacman o-- Sonido
-Sonido o-- Musica
->>>>>>> b4a8f67 (diagrama puml)
-=======
 Pacman "1" o-- "1" Puntuacion
 Pacman "1" o-- "1" Movimiento
 Movimiento "1" o-- "1" Direccion
 Movimiento "1" o-- "1" Velocidad
 Pacman "1" o-- "1" Poder
->>>>>>> 1c878e5 (Merge)
 
 Jugador "1" o-- "1" Control
 Control "1" o-- "1" Teclado
