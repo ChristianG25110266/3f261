@@ -1,19 +1,66 @@
 @startuml
 class Pacman
 class Fantasma
-Class Personaje
-Class Enemigo
-Class Punto
-Class Pastilla
+class Personaje
+class Enemigo
+class Punto
+class Pastilla
+class Fruta
+class Vida
+class Jugador
+class Mapa
+class Laberinto
+class Nivel
+class Movimiento
+class Direccion
+class Puntuacion
+class Tiempo
+class Poder
+class Bonus
+class Portal
+class Muro
+class Camino
+class Sonido
+class Musica
+class Control
+class Teclado
+class Pantalla
+class Animacion
+class Estado
+class Velocidad
+class Colision
 
-Pacman --|> Personaje
-Pacman *-- Vida
-Pacman o-- Pastilla
+Pacman --|> Personaje : es
+Fantasma --|> Enemigo : es
+Enemigo --|> Personaje : es
+Pastilla --|> Punto : es
+Fruta --|> Punto : es
+Bonus --|> Punto : es
 
-Fantasma --|> Enemigo
-Fantasma *-- Vida
-Fantasma *-- Punto
+Pacman *-- Vida : tiene
+Fantasma *-- Vida : tiene
+Jugador o-- Pacman : tiene
+Mapa *-- Laberinto : tiene
+Laberinto *-- Muro : tiene
+Laberinto *-- Camino : tiene
+Nivel o-- Tiempo : tiene
+Pacman o-- Puntuacion : tiene
 
-Fruta --|> Puntos
-Pastilla --|> Puntos
+Pacman ..> Movimiento : usa
+Movimiento ..> Direccion : usa
+Movimiento ..> Velocidad : usa
+Pacman ..> Punto : usa
+Fantasma ..> Pacman : usa
+Jugador ..> Control : usa
+Control ..> Teclado : usa
+Pacman ..> Portal : usa
+Pacman ..> Colision : usa
+Pacman ..> Poder : usa
+
+Pacman ..> Sonido : usa
+Sonido ..> Musica : usa
+Mapa ..> Pantalla : usa
+Pacman ..> Animacion : usa
+Fantasma ..> Estado : usa
+
 @enduml
